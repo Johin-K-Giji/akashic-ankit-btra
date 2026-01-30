@@ -33,7 +33,7 @@ const KeyInsightsGrid = () => {
           className="text-center mb-10"
         >
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#73713E]">
-            8 Key Insights from the{" "}
+            8 Key Insights From The{" "}
             <span className="text-[#FFDB58]">
               Akashic Miracles Masterclass
             </span>

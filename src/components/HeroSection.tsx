@@ -32,7 +32,7 @@ const INDIAN_STATES = [
 ];
 
 type FormData = {
-  name: string;
+  full_name: string;
   email: string;
   phone: string;
   state: string;
@@ -127,7 +127,7 @@ const RegistrationForm = React.memo(function RegistrationForm({
 
   const validate = () => {
     const e: Record<string, string> = {};
-    if (formData.name.trim().length < 2) e.name = "Enter your full name";
+    if (formData.full_name.trim().length < 2) e.full_name = "Enter your full name";
     if (!/^\S+@\S+\.\S+$/.test(formData.email)) e.email = "Enter a valid email";
     if (!/^\d{10}$/.test(formData.phone)) e.phone = "Enter a 10 digit phone number";
     if (!formData.state) e.state = "Select your state";
@@ -165,10 +165,10 @@ const RegistrationForm = React.memo(function RegistrationForm({
       <Field
         label="Full Name"
         icon={User}
-        value={formData.name}
-        error={errors.name}
+        value={formData.full_name}
+        error={errors.full_name}
         placeholder="Enter your name"
-        onChange={(v) => setFormData((p) => ({ ...p, name: v }))}
+        onChange={(v) => setFormData((p) => ({ ...p, full_name: v }))}
       />
 
       <Field
@@ -344,7 +344,7 @@ function WaterBackground({
 
 const HeroSection = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
+    full_name: "",
     email: "",
     phone: "",
     state: "",
@@ -385,10 +385,10 @@ const HeroSection = () => {
 
     const params = new URLSearchParams({
       init_booking: "true",
-      name: formData.name,
+      full_name: formData.full_name,
       email: formData.email,
       phone: formData.phone,
-      state: formData.state,
+      city: formData.state,
       ...getUTMParams(),
     });
 

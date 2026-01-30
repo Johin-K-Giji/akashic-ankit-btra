@@ -78,7 +78,7 @@ const ThankYouSkipOTO = () => {
           className="
             inline-flex items-center gap-2
             px-8 py-4 rounded-full
-            bg-[#3A2C10]
+            bg-[#3DDD5A]
             text-white font-bold text-lg
             shadow-lg
           "

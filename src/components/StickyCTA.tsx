@@ -67,12 +67,30 @@ const StickyCTA = () => {
                 </p>
 
                 <div className="flex items-center gap-3 mt-1 text-xs text-black/80">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    <span className="font-semibold">
-                      {minutes}:{seconds}
-                    </span>
-                  </div>
+             <motion.div
+  animate={
+    timeLeft < 300
+      ? { scale: [1, 1.06, 1] }
+      : undefined
+  }
+  transition={{ duration: 1.2, repeat: Infinity }}
+  className="
+    flex items-center gap-2
+    px-3 py-1.5
+    rounded-full
+    bg-black/10
+    text-black
+  "
+>
+  <Clock className="w-4 h-4" />
+  <span className="font-extrabold tracking-wider text-[20px]">
+    {minutes}:{seconds}
+  </span>
+  <span className="text-[10px] font-semibold opacity-80">
+    LEFT
+  </span>
+</motion.div>
+
 
                   <div className="flex items-center gap-1">
                     <Ticket className="w-4 h-4" />

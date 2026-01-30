@@ -59,7 +59,7 @@ const AkashicRecordsSection = () => {
               >
                 <h2 className="font-display text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
                   <span className="block text-white">
-                    What are
+                    What Are
                   </span>
                   <span className="block text-[#FFDB58] drop-shadow-[0_0_18px_rgba(180,139,57,0.65)]">
                     Akashic Records?

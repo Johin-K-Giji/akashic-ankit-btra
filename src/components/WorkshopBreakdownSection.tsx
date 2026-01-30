@@ -59,8 +59,8 @@ const WorkshopBreakdownSection = () => {
           transition={{ duration: 0.4 }}
           className="text-center mb-8"
         >
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-white">
-            What You Will Get From the{" "}
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-text-[#7D784C]">
+            What You Will Get From The{" "}
             <span className="text-black">3-Day Workshop</span>
           </h2>
         </motion.div>

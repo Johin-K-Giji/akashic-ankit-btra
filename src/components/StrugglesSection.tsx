@@ -42,10 +42,10 @@ const StrugglesSection = () => {
           transition={{ duration: 0.4 }}
           className="text-center mb-8"
         >
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
-            Are you experiencing any of these{" "}
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#7D784C] leading-tight">
+            Are You Experiencing Any Of These{" "}
             <span className="block md:inline text-black">
-              struggles in your healing career?
+              Struggles In Your Healing Career?
             </span>
           </h2>
         </motion.div>
