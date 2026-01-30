@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Healing Workshop Color Palette */
+    --background: 230 18% 94%; /* Grey Velvet #ECEDF2 */
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    /* Leaf Green - Primary */
+    --primary: 75 25% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Plantpot Gold - Accent */
+    --accent: 48 60% 59%;
+    --accent-foreground: 220 30% 15%;
+
+    --secondary: 230 18% 97%;
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 230 18% 90%;
+    --muted-foreground: 220 20% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 15% 85%;
+    --input: 230 15% 85%;
+    --ring: 75 25% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom Healing Theme Colors */
+    --leaf: 75 25% 45%;
+    --leaf-light: 75 20% 60%;
+    --leaf-dark: 75 30% 35%;
+    --gold: 48 60% 59%;
+    --gold-light: 48 50% 70%;
+    --gold-dark: 48 70% 45%;
+    --velvet: 230 18% 94%;
+    --velvet-dark: 230 18% 88%;
+    --cream: 45 30% 96%;
+    --deep-teal: 180 30% 25%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(75 25% 40%) 0%, hsl(75 30% 30%) 50%, hsl(180 25% 20%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(48 60% 59%) 0%, hsl(45 70% 50%) 100%);
+    --gradient-calm: linear-gradient(180deg, hsl(230 18% 94%) 0%, hsl(45 20% 95%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(230 18% 97%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(75 25% 45% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(220 30% 15% / 0.1);
+    --shadow-glow: 0 0 40px hsl(48 60% 59% / 0.3);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 30% 10%;
+    --foreground: 230 18% 94%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 230 18% 94%;
+
+    --popover: 220 30% 12%;
+    --popover-foreground: 230 18% 94%;
+
+    --primary: 75 25% 50%;
+    --primary-foreground: 220 30% 10%;
+
+    --accent: 48 60% 59%;
+    --accent-foreground: 220 30% 10%;
+
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 230 18% 94%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 230 15% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 75 25% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  /* CTA Button Variants */
+  .btn-cta {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground rounded-full transition-all duration-300;
+    background: var(--gradient-gold);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-cta:active {
+    transform: translateY(0);
+  }
+
+  /* Card Styles */
+  .card-healing {
+    @apply bg-card rounded-2xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-healing:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Section Styles */
+  .section-velvet {
+    @apply py-16 md:py-24;
+    background: hsl(var(--velvet));
+  }
+
+  .section-cream {
+    @apply py-16 md:py-24;
+    background: hsl(var(--cream));
+  }
+
+  .section-white {
+    @apply py-16 md:py-24 bg-white;
+  }
+
+  /* Text Styles */
+  .heading-primary {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .heading-secondary {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-leaf {
+    color: hsl(var(--leaf));
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .bg-calm-gradient {
+    background: var(--gradient-calm);
+  }
+
+  .shadow-healing {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(48 60% 59% / 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(48 60% 59% / 0.5);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--velvet));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--leaf-light));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--leaf));
+}
+
+/* Hide scrollbar but keep scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ✅ Fix typing issues if any parent/overlay blocks inputs */
+input, textarea, select, button {
+  pointer-events: auto !important;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  touch-action: manipulation !important;
+}
+
+form, label {
+  pointer-events: auto !important;
+}
