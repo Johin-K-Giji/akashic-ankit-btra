@@ -331,7 +331,7 @@ Error generating stack: `+s.message+`
     rounded-full
     bg-black/10
     text-black
-  `,children:[p.jsx(Ov,{className:"w-4 h-4"}),p.jsxs("span",{className:"font-extrabold tracking-wider",children:[i,":",s]}),p.jsx("span",{className:"text-[10px] font-semibold opacity-80",children:"LEFT"})]}),p.jsxs("div",{className:"flex items-center gap-1",children:[p.jsx(WE,{className:"w-4 h-4"}),p.jsx("span",{className:"font-semibold",children:"Limited Seats Only"})]})]})]}),p.jsx(z.button,{onClick:o,whileTap:{scale:.96},animate:{boxShadow:["0 0 0 rgba(0,0,0,0)","0 0 22px rgba(0,0,0,0.55)"]},transition:{duration:2.2,repeat:1/0,ease:"easeInOut"},className:`
+  `,children:[p.jsx(Ov,{className:"w-4 h-4"}),p.jsxs("span",{className:"font-extrabold tracking-wider text-[20px]",children:[i,":",s]}),p.jsx("span",{className:"text-[10px] font-semibold opacity-80",children:"LEFT"})]}),p.jsxs("div",{className:"flex items-center gap-1",children:[p.jsx(WE,{className:"w-4 h-4"}),p.jsx("span",{className:"font-semibold",children:"Limited Seats Only"})]})]})]}),p.jsx(z.button,{onClick:o,whileTap:{scale:.96},animate:{boxShadow:["0 0 0 rgba(0,0,0,0)","0 0 22px rgba(0,0,0,0.55)"]},transition:{duration:2.2,repeat:1/0,ease:"easeInOut"},className:`
                   px-6 py-3
                   rounded-xl
                   bg-black
